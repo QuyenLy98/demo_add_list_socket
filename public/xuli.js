@@ -13,6 +13,7 @@ socket.on('server-send-thongtin', function (data) {
 });
 
 $(document).ready(function () {
+  socket.emit('load-data');
   $('#btnsend').click(function () {
     socket.emit('hocvien-send-thongtin', {
       hoten: $('#txthoten').val(),
