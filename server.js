@@ -12,6 +12,11 @@ var mang = [];
 
 io.on('connection', function (socket) {
   console.log('co nguoi vua ket noi : ', socket.id);
+  
+  socket.on('load-data', function () {
+    io.sockets.emit('server-send-thongtin', mang);
+  });
+  
   socket.on('hocvien-send-thongtin', function (data) {
     mang.push(new hocvien(data.hoten, data.email, data.sodienthoai));
     io.sockets.emit('server-send-thongtin', mang);
