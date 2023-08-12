@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <script src="jquery.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="xuli.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="information">
+        <input type="text" id="txthoten" placeholder="Họ tên" />
+        <input type="email" id="txtemail" placeholder="Email" />
+        <input type="number" id="txtsdt" placeholder="SĐT" />
+        <input type="button" value="Send" id="btnsend" />
+      </div>
+      <div id="deleteright">
+        <button type="button" id="xoadata">Xóa dữ liệu</button>
+      </div>
+      <div id="listUsers">
+        <h3>Danh sách học viên</h3>
+        <div id="ds"></div>
+      </div>
+    </div>
+  </body>
+</html>
